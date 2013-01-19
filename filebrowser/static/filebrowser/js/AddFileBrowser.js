@@ -17,6 +17,12 @@ var FileBrowser = {
             }
         }
     },
+    show_with_callback: function(close_func, href) {
+        // var id2=String(id).split(".").join("___");
+        FBWindow = window.open(href, '__blank', 'height=600,width=1000,resizable=yes,scrollbars=yes');
+        FBWindow.focus();
+        FBWindow.callback = close_func;
+    },
     // show FileBrowser
     show: function(id, href, close_func) {
         // var id2=String(id).split(".").join("___");
