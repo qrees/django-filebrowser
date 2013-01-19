@@ -21,7 +21,7 @@ var FileBrowser = {
         // var id2=String(id).split(".").join("___");
         FBWindow = window.open(href, '__blank', 'height=600,width=1000,resizable=yes,scrollbars=yes');
         FBWindow.focus();
-        FBWindow.callback = close_func;
+        window.fb_callback = close_func; // TODO: use unique name as "fb_callback"
     },
     // show FileBrowser
     show: function(id, href, close_func) {
