@@ -101,7 +101,14 @@
                 <a href="{{ fileobject.url }}" class="fb_viewlink"><img src="{{ thumbnail_version.url }}" title="{% trans 'View Image' %}" /></a>
             {% endif %}
         </td>
-        
+
+        <!-- COPY HTML -->
+        <td class="fb_html">
+            {% if fileobject.filetype == "Image" %}
+                <pre>&lt;img src=&quot;{{ fileobject.url }}&quot;/&gt;</pre>
+            {% endif %}
+        </td>
+
         <!-- FILENAME/DIMENSIONS -->
         {% if fileobject.filetype == "Folder" %}
             <td><a href="{% url 'filebrowser:fb_browse' %}{% query_string "" "q,dir,p" %}&amp;dir={{ fileobject.directory|urlencode }}"><strong>{{ fileobject.filename }}</strong></a></td>
