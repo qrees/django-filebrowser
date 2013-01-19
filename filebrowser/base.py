@@ -83,8 +83,8 @@ class FileListing():
             for d in dirs:
                 self._walk(os.path.join(path, d), filelisting)
 
-        filelisting.extend(dirs)
-        filelisting.extend(files)
+        filelisting.extend([os.path.join(path, x) for x in dirs])
+        filelisting.extend([os.path.join(path, x) for x in files])
 
     
     def walk(self):
@@ -119,7 +119,7 @@ class FileListing():
         "Returns FileObjects for all files in walk"
         files = []
         for item in self.walk():
-            fileobject = FileObject(os.path.join(self.site.directory, item), site=self.site)
+            fileobject = FileObject(item, site=self.site)
             files.append(fileobject)
         if self.sorting_by:
             files = sort_by_attr(files, self.sorting_by)
