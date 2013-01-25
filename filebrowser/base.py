@@ -106,10 +106,9 @@ class FileListing():
                 self._fileobjects_total.append(fileobject)
         
         files = self._fileobjects_total
-        
         if self.sorting_by:
             files = sort_by_attr(files, self.sorting_by)
-        if self.sorting_order == "desc":
+        if self.sorting_order == "grp-desc":
             files.reverse()
         
         self._results_listing_total = len(files)
