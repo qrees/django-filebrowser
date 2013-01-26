@@ -105,7 +105,7 @@
         <!-- COPY HTML -->
         <td class="fb_html">
             {% if fileobject.filetype == "Image" %}
-                <pre>&lt;img src=&quot;{{ fileobject.url }}&quot;/&gt;</pre>
+                <input readonly="readonly" value="&lt;img src=&quot;{{ fileobject.url }}&quot;/&gt;"/>
             {% endif %}
         </td>
 

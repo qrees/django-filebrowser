@@ -333,12 +333,11 @@ body.rtl .qq-upload-list li a {
     vertical-align: baseline;
 }
 
-.fb_html pre {
-    font-family: monospace;
-    font-size: 12px;
-    color: white;
-    background-color: black;
-    padding: 3px;
+.fb_html input {
     font-weight: bold;
-    overflow: hidden;
+    font-family: monospace;
+    outline: none!important;
+    border-width: 0px !important;
+    text-overflow: ellipsis;
+    width: 350px;
 }

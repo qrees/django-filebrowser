@@ -38,6 +38,9 @@
     </script>
     <script type="text/javascript" charset="utf-8">
         (function($) {
+            $(document).on('click', '.fb_html', function(){
+                $(this).find('input')[0].select();
+            });
             $(document).ready(function() {
                 $("a.grp-pulldown-versions-handler").bind("click", function() {
                     if (!$(this).parent().hasClass("grp-open")) {
