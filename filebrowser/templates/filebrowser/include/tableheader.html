@@ -4,6 +4,7 @@
         <!-- ACTIONS -->
         {% comment %}{% if not query.pop %}<th><input type="checkbox" id="action-toggle"></th>{% endif %}{% endcomment %}
         <!-- SELECT -->
+        {% if query.pop == "0" %}<th></th>{% endif %}
         {% if query.pop == "1" %}<th></th>{% endif %}
         {% if query.pop == "2" %}<th></th>{% endif %}
         {% if query.pop == "3" %}<th></th>{% endif %}
